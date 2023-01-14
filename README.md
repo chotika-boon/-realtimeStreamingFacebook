@@ -14,7 +14,7 @@ Recorded dashboard: [Link](https://nida365-my.sharepoint.com/personal/prapatsorn
 Objective: Analyze customer buying insights for live Facebook campaigns with and without campaigns.
 
 Data Design Diagram: <br /> ![Diagrams](https://media.giphy.com/media/3BEThJIG19ubRrXQao/giphy.gif)
-![test](https://media.giphy.com/media/kPanOj4HAz221VduNm/giphy.gif)
+
 
 Data Source: ![Data Source](https://i.imgur.com/kiaKXuZ.png)
 
