@@ -1,0 +1,1026 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 14,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 0,
+          "y": 0
+        },
+        "id": 9,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(comment_time) FROM sql6589600.realtimedata where datatype= 'facebook1'",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "name": "COUNT",
+                  "parameters": [
+                    {
+                      "name": "comment_time",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "number of comments",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 6,
+          "y": 0
+        },
+        "id": 7,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(distinct commenter_id) FROM sql6589600.realtimedata where datatype ='facebook1'",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "name": "COUNT",
+                  "parameters": [
+                    {
+                      "name": "commenter_id",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "count (distinct commenter_id)",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-BlPu"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 12,
+          "y": 0
+        },
+        "id": 10,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "text": {},
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(comment_time) FROM sql6589600.realtimedata where datatype= 'facebook2'",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "name": "COUNT",
+                  "parameters": [
+                    {
+                      "name": "comment_time",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "number of comments",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-BlPu"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 18,
+          "y": 0
+        },
+        "id": 11,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(distinct commenter_id) FROM sql6589600.realtimedata where datatype ='facebook2'",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "name": "COUNT",
+                  "parameters": [
+                    {
+                      "name": "commenter_id",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "count (distinct commenter_id)",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 0,
+          "y": 7
+        },
+        "id": 4,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "select count(distinct commenter_id)\nfrom realtimedata \nwhere datatype = 'facebook1' and (comment_text like '%280%' or comment_text like '%290%'); ",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "name": "AVG",
+                  "parameters": [
+                    {
+                      "name": "commenter_id",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "customer",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 6,
+          "y": 7
+        },
+        "id": 15,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [],
+            "fields": "/.*/",
+            "values": true
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "select  CONCAT( round((count(distinct flag) /count(distinct commenter_id)) * 100,2),\"%\") as rate from (\nselect commenter_id\n,case when comment_text like '%280%' or comment_text like '%290%' then commenter_id  else null end as flag\nfrom realtimedata \nwhere datatype = 'facebook1' ) as a;",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "name": "AVG",
+                  "parameters": [
+                    {
+                      "name": "commenter_id",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "rate",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-BlPu"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 12,
+          "y": 7
+        },
+        "id": 13,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "select count(distinct commenter_id)\nfrom realtimedata \nwhere datatype = 'facebook2' and (comment_text like '%b1%' or comment_text like '%B1%' or\ncomment_text like '%b2%' or comment_text like '%B2%' or\ncomment_text like '%b4%' or comment_text like '%B4%' or\ncomment_text like '%l1%' or comment_text like '%L1%' or\ncomment_text like '%l2%' or comment_text like '%L2%' or\ncomment_text like '%l4%' or comment_text like '%L4%' or\ncomment_text like '%cl3%' or comment_text like '%CL3%' or comment_text like '%Cl3%' or comment_text like '%cL3%' or\ncomment_text like '%cl6%' or comment_text like '%CL6%' or comment_text like '%Cl6%' or comment_text like '%cL6%' or\ncomment_text like '%BLC4%' or comment_text like '%blc4%' or comment_text like '%Blc4%' or comment_text like '%BLc4%' or\ncomment_text like '%bLc4%' or comment_text like '%bLC4%' or comment_text like '%blC%' or comment_text like '%BlC4%' );",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "name": "COUNT",
+                  "parameters": [
+                    {
+                      "name": "commenter_id",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "customer",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 18,
+          "y": 7
+        },
+        "id": 16,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [],
+            "fields": "/.*/",
+            "values": true
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "select  CONCAT( round((count(distinct flag) /count(distinct commenter_id)) * 100,2),\"%\") from (\nselect commenter_id\n,case when (comment_text like '%b1%' or comment_text like '%B1%' or\ncomment_text like '%b2%' or comment_text like '%B2%' or\ncomment_text like '%b4%' or comment_text like '%B4%' or\ncomment_text like '%l1%' or comment_text like '%L1%' or\ncomment_text like '%l2%' or comment_text like '%L2%' or\ncomment_text like '%l4%' or comment_text like '%L4%' or\ncomment_text like '%cl3%' or comment_text like '%CL3%' or comment_text like '%Cl3%' or comment_text like '%cL3%' or\ncomment_text like '%cl6%' or comment_text like '%CL6%' or comment_text like '%Cl6%' or comment_text like '%cL6%' or\ncomment_text like '%BLC4%' or comment_text like '%blc4%' or comment_text like '%Blc4%' or comment_text like '%BLc4%' or\ncomment_text like '%bLc4%' or comment_text like '%bLC4%' or comment_text like '%blC%' or comment_text like '%BlC4%' )\n then commenter_id  else null end as flag\nfrom realtimedata \nwhere datatype = 'facebook2' ) as a; ",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "name": "AVG",
+                  "parameters": [
+                    {
+                      "name": "commenter_id",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "rate",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-RdYlGr"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "No. of Sales",
+              "axisPlacement": "left",
+              "axisSoftMin": 0,
+              "axisWidth": 10,
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 15,
+              "gradientMode": "opacity",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "smooth",
+              "lineStyle": {
+                "fill": "solid"
+              },
+              "lineWidth": 2,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 12,
+          "x": 0,
+          "y": 14
+        },
+        "id": 5,
+        "options": {
+          "legend": {
+            "calcs": [
+              "sum"
+            ],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "time_series",
+            "rawQuery": true,
+            "rawSql": "select createtime as time ,sum(number ) as sales from(\r\nSelect  commenter_id,datatype,createtime,substr(comment_text,1,4) as pd_code\r\n,case when convert(substr(comment_text,-1,1),SIGNED) = 0 then 1 \r\nelse convert(substr(comment_text,-1,1),SIGNED)  end as number\r\nFrom sql6589600.realtimedata\r\nwhere datatype = 'facebook1' and (comment_text like '%280%' or comment_text like '%290%')\r\n) as a \r\ngroup by createtime;",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "alias": "\"value\"",
+                  "name": "COUNT",
+                  "parameters": [
+                    {
+                      "name": "comment_text",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"time\"",
+                  "parameters": [
+                    {
+                      "name": "createTime",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "Sales",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "cnMnm-h4z"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-BlPu"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "No. of Sales",
+              "axisPlacement": "auto",
+              "axisSoftMin": 0,
+              "axisWidth": 10,
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 15,
+              "gradientMode": "opacity",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "smooth",
+              "lineStyle": {
+                "fill": "solid"
+              },
+              "lineWidth": 2,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 12,
+          "x": 12,
+          "y": 14
+        },
+        "id": 12,
+        "options": {
+          "legend": {
+            "calcs": [
+              "sum"
+            ],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.2-67a213dc85",
+        "targets": [
+          {
+            "dataset": "sql6589600",
+            "datasource": {
+              "type": "mysql",
+              "uid": "cnMnm-h4z"
+            },
+            "editorMode": "code",
+            "format": "time_series",
+            "rawQuery": true,
+            "rawSql": "Select  createtime as time ,-- comment_text , -- count( comment_text)\r\nsum(case when comment_text like '%=%' then \r\n(case when convert(substr(comment_text,-1,1) ,signed) = 0 then 1 else convert(substr(comment_text,-1,1) ,signed) end )\r\nelse 1 end ) as sale\r\nFrom sql6589600.realtimedata\r\nwhere datatype = 'facebook2' and (comment_text like '%b1%' or comment_text like '%B1%' or\r\ncomment_text like '%b2%' or comment_text like '%B2%' or\r\ncomment_text like '%b4%' or comment_text like '%B4%' or\r\ncomment_text like '%l1%' or comment_text like '%L1%' or\r\ncomment_text like '%l2%' or comment_text like '%L2%' or\r\ncomment_text like '%l4%' or comment_text like '%L4%' or\r\ncomment_text like '%cl3%' or comment_text like '%CL3%' or comment_text like '%Cl3%' or comment_text like '%cL3%' or\r\ncomment_text like '%cl6%' or comment_text like '%CL6%' or comment_text like '%Cl6%' or comment_text like '%cL6%' or\r\ncomment_text like '%BLC4%' or comment_text like '%blc4%' or comment_text like '%Blc4%' or comment_text like '%BLc4%' or\r\ncomment_text like '%bLc4%' or comment_text like '%bLC4%' or comment_text like '%blC%' or comment_text like '%BlC4%' )\r\ngroup by createtime;",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "alias": "\"value\"",
+                  "name": "COUNT",
+                  "parameters": [
+                    {
+                      "name": "comment_text",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"time\"",
+                  "parameters": [
+                    {
+                      "name": "createTime",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "realtimedata"
+          }
+        ],
+        "title": "Sales",
+        "type": "timeseries"
+      }
+    ],
+    "refresh": "5s",
+    "schemaVersion": 37,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "finalProject",
+    "uid": "PDpPmah4k",
+    "version": 44,
+    "weekStart": ""
+  }
