@@ -1,11 +1,11 @@
 
 # Real-time Live Commerce Analysis  
 
-Member: 
-6410422007 Prapatsorn Tiawpanichkij
-6410422013 Wanida Thawornsuk
-6310412016 Chotika Boonthaweechok
-6410422022 Juthamas Pissakul
+Member: <br />
+6410422007 Prapatsorn Tiawpanichkij <br />
+6410422013 Wanida Thawornsuk <br />
+6310412016 Chotika Boonthaweechok <br />
+6410422022 Juthamas Pissakul <br />
 
 Full presentation: [link](https://www.canva.com/design/DAFXYPwvemk/v8wYzPi4JFDQCI-xe2RVGQ/edit?utm_content=DAFXYPwvemk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
